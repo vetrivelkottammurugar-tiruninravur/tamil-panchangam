@@ -1,1 +1,34 @@
+:root {
+    --tam-orange: #f4511e; --tam-blue: #039be5; --tam-green: #43a047;
+    --tam-yellow: #ffff00; --blue-dark: #01579b;
+}
+
+body { font-family: 'Arial', sans-serif; background: #f4f4f4; margin: 0; padding: 20px; display: flex; justify-content: center; }
+
+/* Grid Styles */
+.calendar-main { border: 4px solid var(--blue-dark); width: 100%; max-width: 900px; background: #fff; }
+.grid-container { display: grid; grid-template-columns: repeat(7, 1fr); width: 100%; }
+.weekday { background: #eee; padding: 12px; text-align: center; font-weight: bold; border-bottom: 1px solid #ccc; }
+.sun { color: red; }
+
+.date-cell { 
+    height: 140px; border: 0.5px solid #eee; display: flex; flex-direction: column; cursor: pointer; transition: 0.2s; 
+}
+.date-cell:hover { transform: scale(1.02); z-index: 5; box-shadow: 0 5px 15px rgba(0,0,0,0.2); }
+
+/* Mini Sheet Styles */
+.mini-header { display: grid; grid-template-columns: 1fr 1fr 1fr; height: 22px; color: #fff; font-size: 9px; text-align: center; line-height: 22px; font-weight: bold; }
+.m-ora { background: var(--tam-orange); } .m-blu { background: var(--tam-blue); } .m-gre { background: var(--tam-green); }
+.cell-num { flex-grow: 1; display: flex; align-items: center; justify-content: center; font-size: 38px; font-weight: bold; color: #333; }
+.cell-foot { background: var(--tam-yellow); font-size: 10px; padding: 4px; text-align: center; font-weight: bold; border-top: 1px solid #ddd; }
+
+/* Modal Reset & Styles */
+.modal { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.8); z-index: 1000; justify-content: center; align-items: center; flex-direction: column; }
+.sheet-container { background: #fff; width: 90%; max-width: 500px; border: 4px solid #000; position: relative; }
+.sheet-header { display: grid; grid-template-columns: 1.5fr 1fr 2.5fr; height: 120px; border-bottom: 2px solid #000; }
+.box-ora, .box-blu, .box-gre { display: flex; align-items: center; justify-content: center; text-align: center; color: #fff; font-weight: bold; padding: 10px; }
+.box-ora { background: var(--tam-orange); } .box-blu { background: var(--tam-blue); font-size: 60px; } .box-gre { background: var(--tam-green); }
+.main-num { font-size: 160px; font-weight: 900; text-align: center; padding: 20px 0; border-bottom: 2px solid #ccc; line-height: 1; }
+.sheet-footer { background: var(--tam-yellow); padding: 30px; font-size: 24px; font-weight: bold; line-height: 2; text-align: center; }
+.close-btn { position: absolute; top: -45px; right: 0; color: #fff; cursor: pointer; font-weight: bold; border: 1px solid #fff; padding: 5px 15px; }
 
