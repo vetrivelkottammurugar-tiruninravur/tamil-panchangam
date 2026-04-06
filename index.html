@@ -1,31 +1,53 @@
 <!DOCTYPE html>
 <html lang="ta">
 <head>
-<meta charset="UTF-8">
-<title>தமிழ் நாட்காட்டி</title>
-<link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Tamil Calendar</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- html2canvas for Download feature -->
+    <script src="https://cloudflare.com"></script>
 </head>
 <body>
 
-<h2 id="monthTitle"></h2>
+<div class="calendar-wrapper">
+    <div class="controls">
+        <select id="mS"></select>
+        <select id="yS"></select>
+    </div>
 
-<div class="nav">
-  <button onclick="prevMonth()">◀</button>
-  <button onclick="goToday()">Today</button>
-  <button onclick="nextMonth()">▶</button>
+    <div class="calendar-main">
+        <div class="grid-container header-days">
+            <div class="weekday sun">ஞா</div><div class="weekday">தி</div><div class="weekday">செ</div>
+            <div class="weekday">பு</div><div class="weekday">வி</div><div class="weekday">வெ</div><div class="weekday">ச</div>
+        </div>
+        <div class="grid-container" id="grid"></div>
+    </div>
 </div>
 
-<table id="calendar">
-  <thead>
-    <tr>
-      <th>Sun</th><th>Mon</th><th>Tue</th>
-      <th>Wed</th><th>Thu</th><th>Fri</th><th>Sat</th>
-    </tr>
-  </thead>
-  <tbody></tbody>
-</table>
+<!-- Pop-up Modal -->
+<div class="modal" id="pop">
+    <div class="sheet-container" id="captureArea">
+        <div class="close-btn" onclick="closeP()">CLOSE [X]</div>
+        <div class="sheet-header">
+            <div class="box-ora" id="pYearInfo">விசுவாவசு<br>பங்குனி</div>
+            <div class="box-blu" id="pTamDate">22</div>
+            <div class="box-gre" id="pEngInfo">ஏப்ரல் 2026<br>ஞாயிறு</div>
+        </div>
+        <div class="sheet-body">
+            <div class="main-num" id="pBigNum">6</div>
+        </div>
+        <div class="sheet-footer">
+            <div>திதி: <span id="pTithi">...</span></div>
+            <div>நட்சத்திரம்: <span id="pStar">...</span></div>
+        </div>
+    </div>
+    <div class="modal-buttons">
+        <button onclick="downloadImg()">Download Image</button>
+    </div>
+</div>
 
-<script src="config.js"></script>
-<script src="monthly.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
+
