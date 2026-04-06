@@ -1,5 +1,5 @@
-const C_ID = 'YOUR_PROKERALA_CLIENT_ID';
-const C_SEC = 'YOUR_PROKERALA_CLIENT_SECRET';
+const C_ID = '3268922e-286b-441c-a1fc-49c72790c638';
+const C_SEC = 'Jxr1a0ux7UcAqCoZc8xW1uhVeDTHETHvcoqlcwp4';
 let token = null;
 
 const mNames = ["ஜனவரி", "பிப்ரவரி", "மார்ச்", "ஏப்ரல்", "மே", "ஜூன்", "ஜூலை", "ஆகஸ்ட்", "செப்டம்பர்", "அக்டோபர்", "நவம்பர்", "டிசம்பர்"];
