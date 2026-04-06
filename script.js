@@ -1,7 +1,7 @@
 // 1. Define the API URL (e.g., Public Holidays for US in 2025)
 // Change 'US' to 'IN' for India, 'GB' for UK, etc.
-const countryCode = 'US';
-const year = 2025;
+const countryCode = 'IN';
+const year = 2026;
 const apiUrl = `https://nager.at{year}/${countryCode}`;
 
 // 2. Create the Fetch Function
